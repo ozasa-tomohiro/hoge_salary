@@ -1,0 +1,15 @@
+<!-- layout.htmlを継承 -->
+{% extends "layout.html" %}
+
+{% block body%}
+<div>
+    給与
+</div>
+<form method="POST" action="{{ url_for('output') }}">
+    <div>
+        <input type="number" name="salary">円
+    </div>
+    <button type="submit" class="mt-4 btn btn-primary">計算する</button>
+</form>
+
+{% endblock %}

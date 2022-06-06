@@ -1,0 +1,14 @@
+<!-- layout.htmlを継承 -->
+{% extends "layout.html" %}
+
+{% block body%}
+<div>
+    給与:{{'{:,.0f}'.format(salary)}}円の場合、支給額:{{'{:,.0f}'.format(get_salary)}}円、税額:{{'{:,.0f}'.format(tax_salary)}}円です。
+</div>
+
+<form method="GET" action="{{ url_for('input') }}">
+    <button type="submit" class="mt-4 btn btn-primary">戻る</button>
+</form>
+
+
+{% endblock %}
