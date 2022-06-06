@@ -1,7 +1,7 @@
 from flask import redirect, request, render_template, url_for
 from salary import app
-from salary.cal_salary import cal_salary
-from salary.judge_salary import judge_salary
+from salary.views.cal_salary import cal_salary
+from salary.views.judge_salary import judge_salary
 
 
 @app.route("/", methods=["GET"])
